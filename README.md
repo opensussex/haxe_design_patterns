@@ -1,4 +1,6 @@
-# haxe_design_patterns
+# Haxe Design Patterns
+
+Just some Simple demonstrations of design patterns implemented in Haxe.
 
 ```
 haxe <file_to_build>.hxml
