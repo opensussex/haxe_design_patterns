@@ -1,4 +1,4 @@
-class Main {
+class SimpleFactoryMain {
 
     public static function main():Void {
         trace("This is an example of a SimpleFactory");

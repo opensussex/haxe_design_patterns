@@ -1,11 +1,11 @@
 # haxe_design_patterns
 
 ```
-haxe build.hxml
+haxe <file_to_build>.hxml
 ```
 build out to neko
 ```
-neko output.n
+neko <file_to_run_output>.n
 ```
 
 runs the code.
