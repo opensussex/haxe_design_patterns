@@ -33,19 +33,19 @@ class SimpleFactory {
 // Widget Class
 class SquareWidget {
     public function new() {
-        trace('New Widget Created');
+        trace('New Square Widget');
     }
 }
 
 class RoundWidget {
     public function new() {
-        trace('New Wodget Created');
+        trace('New Round Widget');
     }
 }
 
 class OvalWidget {
     public function new() {
-        trace('New Wadget Created');
+        trace('New Oval Widget');
     }
 }
 
