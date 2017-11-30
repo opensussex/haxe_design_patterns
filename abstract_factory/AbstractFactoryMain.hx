@@ -14,6 +14,9 @@ class AbstractFactoryMain {
     }
 }
 
+///////////////////////////////
+/*   THE INTERFACES         */
+/////////////////////////////
 
 //Interface for the AbstractFactory
 interface AbstractPartFactory {
@@ -21,16 +24,21 @@ interface AbstractPartFactory {
     public function createWrapper(wrapper:String):Wrapper;
 }
 
-// For a part we have Content object
+// The Content Part 
 interface Content {
     public function getContent():String;
     public function setContent(content:String):String;
 }
 
+// The Wrapper
 interface Wrapper {
     public function getWrapper():String;
     public function setWrapper(content:String):String;
 }
+
+///////////////////////////////
+/*   THE IMPLEMENTATIONS    */
+/////////////////////////////
 
 
 class ImageFactory implements AbstractPartFactory {
