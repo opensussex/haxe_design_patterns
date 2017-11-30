@@ -3,14 +3,14 @@ class AbstractFactoryMain {
     public static function main():Void {
         trace("This is an example of an AbstractFactory");
         trace("We first create the Factory we want to use");
-        var factory = new ImageFactory();
-        trace("We first Create an imagePart, and at the same time we set the content of that part");
-        var imageContent = factory.createContent('test');
-        trace(imageContent.getContent());
-        imageContent.setContent('changed the content');
-        trace(imageContent.getContent());
-        var imageWrapper = factory.createWrapper('<div class="some_class"></div>');
-        trace(imageWrapper.getWrapper());
+        var part = new ParagraphPartFactory();
+        trace("We first Create an Part, and at the same time we set the content of that part");
+        var partContent = part.createContent('test');
+        trace(partContent.getContent());
+        partContent.setContent('changed the content');
+        trace(partContent.getContent());
+        var partWrapper = part.createWrapper('<div class="some_class"></div>');
+        trace(partWrapper.getWrapper());
     }
 }
 
@@ -41,7 +41,7 @@ interface Wrapper {
 /////////////////////////////
 
 
-class ImageFactory implements AbstractPartFactory {
+class ImagePartFactory implements AbstractPartFactory {
     public function new(){}
     public function createContent(content:String):ImageContent{
         return new ImageContent(content);
@@ -51,7 +51,7 @@ class ImageFactory implements AbstractPartFactory {
     }
 }
 
-class ParagraphFactory implements AbstractPartFactory {
+class ParagraphPartFactory implements AbstractPartFactory {
     public function new(){}
     public function createContent(content:String):ParagraphContent{
         return new ParagraphContent(content);
