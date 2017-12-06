@@ -16,7 +16,7 @@ class SimpleFactory {
         We pass in a string and the return is Dynamic as we don't know what type
         of object will be passed out.
      */
-    public static function create(widgetType:String):Dynamic {
+    public static function create(widgetType:String):Widget {
         switch(widgetType) {
             case 'square_widget':
                 return new SquareWidget();
@@ -30,26 +30,31 @@ class SimpleFactory {
     }
 }
 
+
+interface Widget{
+    
+}
+
 // Widget Class
-class SquareWidget {
+class SquareWidget implements Widget{
     public function new() {
         trace('New Square Widget');
     }
 }
 
-class RoundWidget {
+class RoundWidget implements Widget{
     public function new() {
         trace('New Round Widget');
     }
 }
 
-class OvalWidget {
+class OvalWidget implements Widget{
     public function new() {
         trace('New Oval Widget');
     }
 }
 
-class BasicWidget {
+class BasicWidget implements Widget{
     public function new() {
         trace('New Wedget Created');
     }
